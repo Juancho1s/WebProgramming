@@ -95,6 +95,7 @@
 
     .Porcentage{
         margin-left: 430px;
+        margin-right: -20px
     }
 
     .material-symbols-outlined {
@@ -108,8 +109,8 @@
     .Battery{
         position: absolute;
         height: 10px;
-        margin-left: 500px;
-        margin-top: -7px;
+        margin-left: 485px;
+        margin-top: -6px;
         padding-bottom: 5px;
     }
     /* +--++--++- */
@@ -305,6 +306,7 @@ This section belongs to the Container from Showing and Sounds
 
     .AlbumSubtittle{
         font-size: 50%;
+        color: #66636e;
     }
 
     .Media{
@@ -340,6 +342,75 @@ This section belongs to the Container from Showing and Sounds
     }
 
     /* +--++--++- */
+/*
+    -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+*/
+
+/*
+This section belongs to the songs section
+*/
+    .Sounds{
+        color: #ffffff;
+        margin-left: 15px;
+    }
+
+    .Album_Sugestion{
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: solid;
+        border-width: 1px;
+        border-color: #4d889a;
+        height: 28px;
+        padding-right: 10px;
+    }
+
+    .Img_Songs{
+        width: 28px;
+        height: 28px;
+    }
+
+    .New_Album{
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: solid;
+        border-width: 1px;
+        border-color: #4d889a;
+        height: 36px;
+        padding-right: 10px;
+    }
+
+    .Img_Songs_New{
+        width: 36px;
+        margin-right: 5px;
+    }
+
+    .Text_Sounds_H{
+        color: #726e7a;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 100;
+        font-size: 50%;
+    }
+
+    .Between{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Text_Sounds {
+        font-weight: 100;
+        font-size: 50%;
+    }
+
+    .Text_Index{
+        font-weight: 100;
+        margin-left: 5px;
+        margin-right: 15px;
+        font-size: 50%;
+    }
 /*
     -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 */

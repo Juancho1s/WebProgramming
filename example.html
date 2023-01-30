@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="example.css" />
+    <title>Example using JS</title>
+
+    <script>
+      window.addEventListener("load", load);
+
+      function load() {
+        let botton = document.getElementById("Calculate");
+        botton.addEventListener("click", res);
+      }
+
+      function res() {
+        let n_1 = parseInt(document.getElementById("number_1").value);
+        let n_2 = parseInt(document.getElementById("number_2").value);
+        let n_3 = parseInt(document.getElementById("number_3").value);
+
+        let result = document.getElementById("result");
+
+        if (n_1 > n_2 && n_1 > n_3) {
+          console.log(n_1 + " is the greattest number");
+          result.innerText = "El numero mayor es: " + n_1;
+        } else if (n_2 > n_3) {
+          console.log(n_2 + " is the greattest number");
+          result.innerText = "El numero mayor es: " + n_2;
+        } else {
+          console.log(n_3 + " is the greattest number");
+          result.innerText = "El numero mayor es: " + n_3;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Get the greatest number</h1>
+    <main>
+      <div>
+        <lable>Number 1: </lable>
+        <input type="text" id="number_1" />
+      </div>
+      <div>
+        <lable>Number 2: </lable>
+        <input type="text" id="number_2" />
+      </div>
+      <div>
+        <lable>Number 3: </lable>
+        <input type="text" id="number_3" />
+      </div>
+      <button id="Calculate">Calculate</button>
+      <p id="result"></p>
+    </main>
+  </body>
+</html>
