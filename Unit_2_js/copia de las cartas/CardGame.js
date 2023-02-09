@@ -1,24 +1,9 @@
 /* This for loop generates almost all the classes and articles of the document */
 
-let game_V = document.querySelectorAll(".Game");
-//let sections = game_V.querySelector(".Game_Card");
-for (let i = 0; i < 4; i++) {
-  for (let j = 0; j < 4; j++) {
-    let sections = document.createElement("section");
-    sections.classList.add("Game_Card");
-    sections.innerHTML = `<div class="Game_Container_Card">
-    <div class="Game_Front_Container_Card">
-      <img
-        src="Images/cardBack.png"
-        alt="This is the image of the card."
-      />
-    </div>
-    <div class="Back">
-      <p class="Number">1</p>
-    </div>
-    </div>`;
-    game_V[i].appendChild(sections);
-  }
+let game_V = document.querySelector(".Game");
+let sections = game_V.querySelector(".Game_Card");
+for (let i = 0; i < 5; i++) {
+  game_V.appendChild(sections);
 }
 
 /* These are the variables which I am going to use to execute the game */
@@ -58,7 +43,7 @@ Here, in this function, are created all the processes to know the decision of th
 */
 function onClick() {
   /* First, we need to know (with this conditional) if the click in the card in not repeated */
-  if (this == temp) {
+  if(this == temp){
     return;
   }
   /* Then We need to know about the selections number from the user if it is greather than 1 the user cannot select anuyone else */
@@ -94,10 +79,7 @@ function onClick() {
     In this section the comparation between the selected cards is made and if the data is equal in both of them
     the class selected changes to Correct and all the events from those cards are removed.
     */
-    if (
-      Selected_Cards[0].children[1].textContent ==
-      Selected_Cards[1].children[1].textContent
-    ) {
+    if (Selected_Cards[0].children[1].textContent == Selected_Cards[1].children[1].textContent) {
       Selected_Cards[0].classList.remove("Selected");
       Selected_Cards[0].classList.add("Correct");
       Selected_Cards[1].classList.remove("Selected");
@@ -105,8 +87,8 @@ function onClick() {
 
       temp.removeEventListener();
       this.removeEventListener();
-    } else {
-      setTimeout(() => {
+    }else{
+      setTimeout(()=>{
         /* In the opposite case, all the "Selected" classes are removed. This to return the card to the original position */
         for (let i = 0; i < Selected_Cards.length; i++) {
           Selected_Cards[i].classList.remove("Selected");
@@ -114,12 +96,12 @@ function onClick() {
         Selected_Cards = [];
       }, 1000);
     }
-  } else {
+  }else{
     temp = this;
   }
 }
 
-function colorGange(card_1, card_2) {
+function colorGange(card_1, card_2){
   card_1.classList.add("");
   card_2.classList.add("");
 }

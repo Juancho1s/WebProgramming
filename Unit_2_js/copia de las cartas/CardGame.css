@@ -7,15 +7,12 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Top{
-  height: 1140px;
-  font-size: 30px;
-}
-
-.Start{
-
+.Start_IP{
+  
 }
 
 .Game {
@@ -26,7 +23,7 @@ body {
 .Game_Card {
   width: 163px;
   height: 275px;
-  margin: 5px;
+  margin: 0.5em;
   cursor: pointer;
 }
 
