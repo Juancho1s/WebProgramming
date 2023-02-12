@@ -7,15 +7,109 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
+  justify-content: center;
+  background: #ffffff;
 }
 
-.Top{
-  height: 1140px;
+button{
   font-size: 30px;
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #25b159;
 }
 
-.Start{
+.Format, .FinalWindow, .GameWindow {
+  display: none;
+  opacity: 0.0;
+}
 
+.GameWindow_Able{
+  width: 300px;
+  display: initial;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Adition{
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.Name{
+  margin-right: 15px;
+}
+
+.Format_Able{
+  display: initial;
+  opacity: 1;
+}
+
+.StartWindow.DisAble{
+  display: none;
+  opacity: 0.0;
+}
+
+.StartWindow{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+}
+
+.StartWindow input{
+  font-size: 20px;
+}
+
+.Start_IP{
+  display: flex;
+  margin: 10px;
+}
+
+.ColorSelection{
+  margin-right: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.p1Color{
+  background-color: #ffa500;
+  transition: 1s;
+}
+
+.p2Color{
+  background-color: #0000ff;
+  transition: 1s;
+}
+
+.control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  border: solid;
+  border-radius: 4px;
+  height: 45px;
+}
+
+.Punctuation{
+  margin-right: 5px;
+}
+
+
+
+
+.PlayerTurn{
+  font-size: 20px;
 }
 
 .Game {
@@ -61,9 +155,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 275px;
   color: #ffffff;
   background-color: purple;
+  font-size: 100px;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+}
+
+.Back_Correct_P1, .Back_Correct_P2{
+  width: 163px;
+  height: 275px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.Back_Correct_P1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ffa500;
+  font-size: 100px;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+}
+
+.Back_Correct_P2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 275px;
+  color: #ffffff;
+  background-color: #0000ff;
   font-size: 100px;
   border-radius: 5px;
   transform: rotateY(180deg);

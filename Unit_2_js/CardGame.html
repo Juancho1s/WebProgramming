@@ -10,20 +10,43 @@
     <link rel="icon" href="Images/Logo.png" />
   </head>
   <body>
-    <section class="Top">
-      <article class="Start">
-        <h1>Players:</h1>
-        <div class="Start_IP">
-          <label>Player 1 name:</label>
-          <input type="text" id="P_1" />
-        </div>
-        <div class="Start_Ime:">
-          <label for="">Player 2 name:</label>
-          <input type="text" id="P_2" />
-        </div>
-      </article>
+    <section id="Start" class="StartWindow">
+      <h1>Players:</h1>
+      <div class="Start_IP">
+        <div class="ColorSelection p1Color"></div>
+        <input type="text" value="Player 1" class="P_1 control" />
+      </div>
+      <div class="Start_IP">
+        <div class="ColorSelection p2Color"></div>
+        <input type="text" value="Player 2" class="P_2 control" />
+      </div>
+      <button class="Start_B">Start</button>
     </section>
-    <section class="Format">
+
+    <div id="Final" class="FinalWindow">
+      <h1 class="WinMessage">Congratulations!!!</h1>
+      <h2 class="WinerName">Player</h2>
+      <h3 class="puntuation">0</h3>
+      <button class="Restart_B">Restart</button>
+      <button class="Reset_B">Reset</button>
+    </div>
+
+    <div id="Game" class="GameWindow">
+      <section class="PlayerTurn Adition">
+        <div class="ColorSelection p1Color"></div>
+        <h2 class="Name P1">Player 1</h2>
+        <h2 class="Punctuation">0</h2>
+        <h2 class="Turn_Mark"><</h2>
+      </section>
+      <section class="Adition">
+        <div class="ColorSelection p2Color"></div>
+        <h2 class="Name P2">Player 2</h2>
+        <h2 class="Punctuation">0</h2>
+        <h2 class="Turn_Mark"></h2>
+      </section>
+    </div>
+
+    <section id="Format" class="Format">
       <article class="Game">
         <section class="Game_Card">
           <div class="Game_Container_Card">
