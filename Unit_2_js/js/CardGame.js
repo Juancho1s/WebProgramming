@@ -27,6 +27,10 @@ for (let i = 0; i < 4; i++) {
 let temp;
 /* This variable multipies the score according to the number of successes */
 let muliplier = 1;
+/* This is a follow up of the correct pairs of cards */
+let allCorrectSelections = 0;
+/* This variable works in order to mix all the numbers on the cards */
+let randomSelector_1 = 0;
 /* The next arrays are created to contain the reandomization of the cards. By random numbers put in two arrays */
 let arryRandom_1 = [];
 let arryRandom_2 = [];
@@ -36,37 +40,32 @@ let Selected_Cards = [];
 let playersCounter = [0, 0];
 /* This is the variable which refers to the player's turn */
 let playersTurn = true;
-/* This variable works in order to mix all the numbers into the cards */
-let randomSelector_1 = 0;
 /* The next variable works in order to get the div which contains the players */
 let playersSection = document.getElementById("Game");
 /* This variable is to get the name of the two players */
 let players = document.querySelectorAll("input");
-/* This variable gets the button to start the game */
-let button = document.querySelector(".Start_B");
 /* This variable is to put the names in the game screen */
 let names = document.querySelectorAll(".Name");
-/*This variable works in order to get all the elements with the classes called Game_Card*/
-let cards = document.querySelectorAll(".Game_Card");
 /* This other variable works in order to get all the classes called Number */
 let cards_numbers = document.querySelectorAll(".Number");
 /* This varable contains all the players' punctuation */
 let punctuationContainer = document.querySelectorAll(".Punctuation");
+/* This variable is to have access to all the cards */
+let cards = document.querySelectorAll(".Game_Card");
+
+/* This instructin inserts an event to the button restart, at the time it is cliked. */
+document.getElementById("Restart").addEventListener("click", restart);
+/* The next instruction inserts an event to the button, in otder to call a function. */
+document.querySelector(".Start_B").addEventListener("click", Starting);
+/* This is the adition of the event to the button, in order to reset all the page */
+document.getElementById("Reset").addEventListener("click", Reset);
 
 /* This funciton is the charge of creating the random numbers */
 random_Filling(arryRandom_1);
 random_Filling(arryRandom_2);
 
-/* The next instruction inserts an event to the button, in otder to call a function. */
-button.addEventListener("click", Starting);
-
 /* Here into this for loop the random numbers are put into the HTML document */
-for (let i = 0; i < cards.length / 2; i++) {
-  /* The implementation of the numbers of every array is decided from here because a single array has the middle of the total data */
-  cards_numbers[i + randomSelector_1].textContent = arryRandom_1[i];
-  randomSelector_1++;
-  cards_numbers[i + randomSelector_1].textContent = arryRandom_2[i];
-}
+inserting();
 /* 
 Here, in this function, are created all the processes to know the decision of the players
 */
@@ -112,7 +111,7 @@ function onClick() {
       Selected_Cards[0].children[1].firstElementChild.textContent ==
       Selected_Cards[1].children[1].firstElementChild.textContent
     ) {
-      let validation = setTimeout(() => {
+      setTimeout(() => {
         Selected_Cards[0].classList.remove("Selected");
         Selected_Cards[0].classList.add("Correct");
         Selected_Cards[1].classList.remove("Selected");
@@ -128,6 +127,7 @@ function onClick() {
         Selected_Cards[0].children[1],
         playersTurn
       );
+      allCorrectSelections++;
       /* Here is added 1 to the multiplier (only if the player answered correctly) */
       muliplier++;
     } else {
@@ -154,32 +154,68 @@ function onClick() {
           Selected_Cards[i].classList.remove("Selected");
         }
         Selected_Cards = [];
-      }, 1000);
+      }, 500);
     }
   } else {
     /* Here we put the varable temp in case the two cards are not selected */
     temp = this;
+  }
+}
+
+/* This is the functions which works in order to put the random numbers on the cards */
+function inserting() {
+  /* Here we need to trestart the variable because of the refresh */
+  let cards_numbers = document.querySelectorAll(".Number");
+  for (let i = 0; i < 10; i++) {
+    /* The implementation of the numbers of every array is decided from here because a single array has the middle of the total data */
+    cards_numbers[i + randomSelector_1].textContent = arryRandom_1[i];
+    randomSelector_1++;
+    cards_numbers[i + randomSelector_1].textContent = arryRandom_2[i];
+  }
 }
 
 /* This function makes the changes of the color for the differents cards */
 function Validating(card_1, card_2, playerTurn) {
-  let validation = setTimeout(() => {
+  setTimeout(() => {
     if (playerTurn == true) {
-      card_1.classList.remove("Back");
       card_1.classList.add("Back_Correct_P1");
-      card_2.classList.remove("Back");
       card_2.classList.add("Back_Correct_P1");
       playersCounter[0] = playersCounter[0] + 1 * muliplier;
       punctuationContainer[0].textContent = playersCounter[0];
+      if (allCorrectSelections == 10) {
+        ActivationFinal();
+      }
     } else {
-      card_1.classList.remove("Back");
       card_1.classList.add("Back_Correct_P2");
-      card_2.classList.remove("Back");
       card_2.classList.add("Back_Correct_P2");
       playersCounter[1] = playersCounter[1] + 1 * muliplier;
       punctuationContainer[1].textContent = playersCounter[1];
+      if (allCorrectSelections == 10) {
+        ActivationFinal();
+      }
     }
   }, 500);
+}
+
+function ActivationFinal() {
+  let fin = document.querySelector(".FinalWindow");
+  let format = document.getElementById("Format");
+  let winerName = document.querySelector(".WinerName");
+  let punctuation = document.querySelector(".FinalPunctuation");
+
+  fin.classList.add("FinalWindow_Able");
+  fin.classList.remove(".FinalWindow");
+  playersSection.classList.add("GameWindow");
+  playersSection.classList.remove("GameWindow_Able");
+  format.classList.remove("Format_Able");
+  format.classList.add("Format");
+  if (playersCounter[0] > playersCounter[1]) {
+    winerName.textContent = `${players[0].value} wins`;
+    punctuation.textContent = `Score: ${playersCounter[0]} points`;
+  } else {
+    winerName.textContent = `${players[1].value} wins`;
+    punctuation.textContent = `Score: ${playersCounter[1]} points`;
+  }
 }
 
 /* This function fills the arrays with random numbers */
@@ -199,8 +235,6 @@ function Starting() {
   let start = document.getElementById("Start");
   let format = document.getElementById("Format");
   let game = document.getElementById("Game");
-  /* This variable is to have access to all the cards */
-  let cards = document.querySelectorAll(".Game_Card");
 
   /* In this loop are put the names in the game screen's variables */
   for (let i = 0; i < names.length; i++) {
@@ -214,6 +248,11 @@ function Starting() {
   game.classList.add("GameWindow_Able");
   game.classList.remove("GameWindow");
 
+  transition();
+}
+
+function transition() {
+  let cards = document.querySelectorAll(".Game_Card");
   /* This section introduces a little transition for the game */
   for (let i = 0; i < cards.length; i++) {
     (() => {
@@ -241,4 +280,51 @@ function Delay(cards) {
       }, i * 200);
     })(i);
   }
+}
+
+function cleaning() {
+  muliplier = 1;
+  Selected_Cards = [];
+  arryRandom_1 = [];
+  arryRandom_2 = [];
+  playersCounter = [0, 0];
+  playersTurn = true;
+  randomSelector_1 = 0;
+  playersTurn = true;
+  allCorrectSelections = 0;
+
+  random_Filling(arryRandom_1);
+  random_Filling(arryRandom_2);
+  inserting();
+  playersSection.children[1].classList.remove("PlayerTurn");
+  playersSection.children[1].children[3].textContent = "";
+  playersSection.children[0].children[3].textContent = " <";
+  playersSection.children[0].classList.add("PlayerTurn");
+}
+
+function restart() {
+  /* This variable is to have access to all the cards again, becuase of the refresh */
+  cards = document.querySelectorAll(".Game_Card");
+  let cardsBack1 = document.querySelectorAll(".Back");
+  let correctCards = document.querySelectorAll(".Correct");
+
+  cleaning();
+
+  for (let i = 0; i < 20; i++) {
+    cardsBack1[i].classList.remove("Back_Correct_P1");
+    cardsBack1[i].classList.remove("Back_Correct_P2");
+    correctCards[i].classList.remove("Correct");
+  }
+  document
+    .querySelector(".FinalWindow_Able")
+    .classList.remove("FinalWindow_Able");
+  document.getElementById("Format").classList.add("Format_Able");
+  punctuationContainer[0].textContent = "0";
+  punctuationContainer[1].textContent = "0";
+  playersSection.classList.add("GameWindow_Able");
+  transition();
+}
+
+function Reset() {
+  location.reload();
 }

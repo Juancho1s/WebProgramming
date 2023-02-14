@@ -20,6 +20,7 @@ button{
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #25b159;
+  color: #ffffff;
 }
 
 .Format, .FinalWindow, .GameWindow {
@@ -44,6 +45,7 @@ button{
 
 .Name{
   margin-right: 15px;
+  color: #000000;
 }
 
 .Format_Able{
@@ -102,7 +104,12 @@ button{
 }
 
 .Punctuation{
+  color: #000000;
   margin-right: 5px;
+}
+
+.Turn_Mark{
+  color: #000000;
 }
 
 
@@ -190,4 +197,37 @@ button{
   font-size: 100px;
   border-radius: 5px;
   transform: rotateY(180deg);
+}
+
+
+
+
+.FinalWindow_Able{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: initial;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: #ffffff;
+  font-size: 30px;
+}
+
+.FinalWindow_Able div{
+  display: flex;
+  margin: 50px;
+}
+
+.FinalWindow_Able h2{
+  margin-bottom: 50px;
+}
+
+.FinalWindow_Able h1{
+  margin: 50px;
+  color: #ffd500;
 }
