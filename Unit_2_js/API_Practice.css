@@ -1,0 +1,39 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+.Container {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Card {
+  background: rgb(138, 232, 255);
+  background: radial-gradient(
+    circle,
+    rgba(138, 232, 255, 0.39548319327731096) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 400px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Card_UserData {
+  margin-left: 20px;
+}
+
+.Card_Avatar {
+  height: 100px;
+  width: 100px;
+}
