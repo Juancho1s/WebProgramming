@@ -4,13 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="API_Practice.css">
+    <link rel="stylesheet" href="API_Practice.css" />
+    <script src="js/API_Verbs.js" defer></script>
     <script src="js/API_Practice.js" defer></script>
     <title>API Practice</title>
   </head>
   <body>
-    <article id="Container" class="Container">
-      
+    <section id="InteractionFields" class="InteractionFields">
+      <article id="Insert" class="Insert">
+        <h2>Insert new user</h2>
+        <lable>Name:</lable>
+        <input id="NameInput" class="NameInput" type="text" />
+        <lable>Last name:</lable>
+        <input id="LNInput" class="LNInput" type="text" />
+        <lable>e-mail:</lable>
+        <input id="eMailInput" class="eMailInput" type="text" />
+        <button id="Add_Button" class="Add_Button">Add</button>
+      </article>
+    </section>
+    <article id="Container" class="Container"></article>
+    <article id="OtherWindow" class="OtherWindow">
+      <article id="ValidationWindow" class="ValidationWindow">
+        <h2 id="Message" class="Message">Message</h2>
+        <div>
+          <h2>First Name:</h2>
+          <h3 id="FNInsertion">Insert field</h3>
+        </div>
+        <div>
+          <h2>Last Name:</h2>
+          <h3 id="LNInsertion">Insert field</h3>
+        </div>
+        <div>
+          <h2>ID:</h2>
+          <h3 id="IdInsertion">Insert field</h3>
+        </div>
+        <button id="Ok_Button">OK</button>
+      </article>
     </article>
   </body>
 </html>

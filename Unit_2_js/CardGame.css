@@ -11,8 +11,9 @@ body {
   background: #ffffff;
 }
 
+
 button{
-  font-size: 30px;
+  font-size: 10px;
   margin: 10px;
   width: 100px;
   height: 40px;
@@ -21,6 +22,11 @@ button{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #25b159;
   color: #ffffff;
+}
+
+.Insert{
+  display: flex;
+  
 }
 
 .Format, .FinalWindow, .GameWindow {

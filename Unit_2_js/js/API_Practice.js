@@ -1,8 +1,9 @@
+
 fetch("https://reqres.in/api/users?page=1")
   .then((response) => response.json())
   .then((ObjData) => CreateUI(ObjData));
 
-  fetch("https://reqres.in/api/users?page=2")
+fetch("https://reqres.in/api/users?page=2")
   .then((response) => response.json())
   .then((ObjData) => CreateUI(ObjData));
 
@@ -10,9 +11,11 @@ function CreateUI(ObjData) {
   const user = ObjData.data;
   const Card = document.getElementById("Container");
   user.forEach((user) => {
-    let newCard =`
+    let newCard = `
     <article class="Card">
-        <img class="Card_Avatar" src="${user.avatar}" alt="This is the user's avatar." />
+        <img class="Card_Avatar" src="${
+          user.avatar
+        }" alt="This is the user's avatar." />
         <section class="Card_UserData">
           <div class="FirstName">
             <h3>First Name:${"   " + user.first_name}</h3>
