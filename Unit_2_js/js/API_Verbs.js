@@ -3,6 +3,10 @@ document
   .getElementById("InputID_Update")
   .addEventListener("keyup", ValidatingId);
 
+document
+  .getElementById("InputID_Delete")
+  .addEventListener("keyup", ValidatingIdDelete);
+
 function Create() {
   let name = document.getElementById("NameInput").value;
   let lastName = document.getElementById("LNInput").value;
@@ -64,6 +68,12 @@ function ValidatingId() {
     .then((ObjData) => IdInsertion(ObjData));
 }
 
+function ValidatingIdDelete() {
+  fetch("https://reqres.in/api/users/2")
+    .then((response) => response.json())
+    .then((ObjData) => IdDeleteInsertion(ObjData));
+}
+
 function IdInsertion(ObjData) {
   let userData = document.getElementById("IDDisplay");
   let typed = document.getElementById("InputID_Update");
@@ -79,15 +89,34 @@ function IdInsertion(ObjData) {
         <input id="eMailUpdate" class="eMailInput" type="text" value="${ObjData.data.email}"/>
         <button id="Update_Button" class="Update_Button">Update</button>`;
     userData.innerHTML += display;
-
-    userData.classList.add("IDDisplay_Able");
-    userData.classList.remove("IDDisplay");
   } else {
     userData.innerHTML = "";
-    userData.classList.add("IDDisplay");
-    userData.classList.remove("IDDisplay_Able");
   }
   document.getElementById("Update_Button").addEventListener("click", Update);
+}
+
+function IdDeleteInsertion(ObjData) {
+  let userData = document.getElementById("IDDeleteDisplay");
+  let typed = document.getElementById("InputID_Delete");
+  if (ObjData.data.id == typed.value) {
+    if (userData.children.length > 0) {
+      userData.innerHTML = "";
+    }
+    let display = `<lable>Name:</lable>
+        <h3>${ObjData.data.first_name}</h3>
+        <lable>Last name:</lable>
+        <h3>${ObjData.data.last_name}</h3>
+        <lable>e-mail:</lable>
+        <h3>${ObjData.data.email}</h3>
+
+        <h4 style="margin-top: 10px">Are you shure you want to delete this user?</h4>
+
+        <button id="Delete_Button" class="Update_Button">Delete</button>`;
+    userData.innerHTML += display;
+  } else {
+    userData.innerHTML = "";
+  }
+  document.getElementById("Delete_Button").addEventListener("click", Delete);
 }
 
 function Update() {
@@ -134,14 +163,45 @@ function UpdateMessage(ObjData) {
           <h2>Date:</h2>
           <h3 id="UpdateDate">${ObjData.updatedAt}</h3>
         </div>
-        <button id="Ok_Button">OK</button>
+        <section class="AllowDeny">
+          <button id="Ok_Button">OK</button>
+        </section>
       </article>
     </article>`;
 
+  document.getElementById("IDDisplay").innerHTML = "";
   document.querySelector("body").innerHTML += confirmationMessage;
   document
     .getElementById("Ok_Button")
     .addEventListener("click", okUpdateFunction);
+}
+
+function Delete() {
+  document.getElementById("IDDeleteDisplay").innerHTML = "";
+  document.getElementById("InputID_Delete").value = "";
+
+  let url = "https://reqres.in/api/users/2";
+
+  let options = {
+    method: "DELETE",
+  };
+
+  fetch(url, options)
+    .then((response) => response.status)
+    .then((ObjData) => {
+      let deleteMessage = `<article id="OtherWindow" class="OtherWindow">
+      <article id="ValidationWindow" class="ValidationWindow">
+        <h2 id="Message" class="Message">The user was successfully deleted!!</h2>
+        <h3>Api response: ${ObjData}</h3>
+        <button id="OK_DeleteButton">Ok</button>
+      </article>
+    </article>`;
+
+      document.querySelector("body").innerHTML += deleteMessage;
+      document
+        .getElementById("OK_DeleteButton")
+        .addEventListener("click", okDeleteFunction);
+    });
 }
 
 function okUpdateFunction() {
@@ -149,7 +209,15 @@ function okUpdateFunction() {
   document
     .getElementById("InputID_Update")
     .addEventListener("keyup", ValidatingId);
-  document.getElementById("IDDisplay").innerHTML = "";
+
+  message.remove();
+}
+
+function okDeleteFunction() {
+  let message = document.getElementById("OtherWindow");
+  document
+    .getElementById("InputID_Delete")
+    .addEventListener("keyup", ValidatingIdDelete);
 
   message.remove();
 }
