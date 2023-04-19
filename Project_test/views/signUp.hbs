@@ -1,0 +1,226 @@
+<article class="flex h-fit w-screen place-content-center items-center">
+  <section class="rounded-3xl drop-shadow-lg bg-slate-200 p-16">
+    <section
+      class="flex items-center justify-center text-center align-middle"
+    >
+      <?xml version="1.0" ?><svg
+        viewBox="0 0 60 60"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-12 w-12 fill-slate-800 dark:fill-white"
+      >
+        <title />
+        <g data-name="Layer 1" id="Layer_1">
+          <path
+            d="M38,25.31152v-12.438A4.00031,4.00031,0,0,0,37,5h-.10242l1.06433-3.7251A1.00009,1.00009,0,0,0,37,0H25a1.00009,1.00009,0,0,0-.96191,1.2749L25.10242,5H25a4.00031,4.00031,0,0,0-1,7.87354V25.312A17.72028,17.72028,0,0,0,13,42a18,18,0,0,0,36,0A17.71709,17.71709,0,0,0,38,25.31152ZM35.67383,2,34.24609,7H27.75391L26.32617,2Zm-10.335,24.94092A.99985.99985,0,0,0,26,26V12a.99974.99974,0,0,0-1-1,2,2,0,0,1,0-4h.67383l.36426,1.2749A1.00094,1.00094,0,0,0,27,9h8a1.00094,1.00094,0,0,0,.96191-.7251L36.32617,7H37a2,2,0,0,1,0,4,.99974.99974,0,0,0-1,1V26a.99939.99939,0,0,0,.66211.94092,15.42565,15.42565,0,0,1,5.92212,3.83386c-6.81989-.45886-9.72546.92352-12.53442,2.27161-2.97894,1.43079-5.81293,2.78088-13.58069,2.09332A15.42909,15.42909,0,0,1,25.33887,26.94092ZM31,58A16.01833,16.01833,0,0,1,15,42a16.80777,16.80777,0,0,1,.7276-4.92316c1.71338.16754,3.22894.24786,4.56146.24786a21.105,21.105,0,0,0,10.627-2.4751c2.93726-1.41,5.73254-2.738,13.39642-1.916A16.31383,16.31383,0,0,1,47,42,16.01833,16.01833,0,0,1,31,58Z"
+          />
+          <path
+            d="M18.99994,42a17.059,17.059,0,0,1,.10449-1.88965,1.0003,1.0003,0,0,0-1.98828-.22168A19.14888,19.14888,0,0,0,16.99994,42a18.05449,18.05449,0,0,0,.502,4.23389.99955.99955,0,1,0,1.94336-.46875A16.11089,16.11089,0,0,1,18.99994,42Z"
+          />
+          <path
+            d="M21.871,49.37744a.99973.99973,0,1,0-1.56445,1.24512,17.09608,17.09608,0,0,0,2.0293,2.12549A1.00028,1.00028,0,0,0,23.664,51.252,15.08894,15.08894,0,0,1,21.871,49.37744Z"
+          />
+        </g>
+      </svg>
+      <h1 class="text-4xl font-bold">GradEvent</h1>
+    </section>
+
+    <form action="Signup" method="POST">
+      <div class="flex-col content-center items-center py-8 text-center">
+
+        <div class="content-center">
+            <h2>Name:</h2>
+            <input type="text" name="name" id="name" class="inputSingUp"/>
+        </div>
+
+        <div>
+            <h2>Last name:</h2>
+            <input type="text" name="lName" id="lName" class="inputSingUp"/>
+        </div>
+
+        <div class="content-center">
+            <h2>Birthdate:</h2>
+            <input type="date" name="BDay" id="BDay" class="inputSingUp text-center"/>
+        </div>
+
+        <div class="content-center space-x-1">
+            <h2>Gender:</h2>
+            <div class="flex justify-center">
+              <div class="p-1">
+                <label for="">Male:</label>
+                <input 
+                  type="radio" 
+                  name="RadioGender" 
+                  id="RadioGenderM" 
+                  value="Male"
+                />
+              </div>
+              
+              <div class="p-1">
+                <label for="">Female:</label>
+                <input 
+                  type="radio" 
+                  name="RadioGender" 
+                  id="RadioGenderF" 
+                  value="Female"
+                  />
+              </div>
+              
+              <div class="p-1">
+                <label for="">Other:</label>
+                <input 
+                  type="radio" 
+                  name="RadioGender" 
+                  id="RadioGenderO" 
+                  value="Other"
+                  />
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="content-center">
+          <h2>E-mail:</h2>
+          <input
+            type="email"
+            name="usrEMail"
+            id="usrEMail"
+            class="inputSingUp"
+          />
+        </div>
+
+        <div class="content-center">
+          <h2>Password:</h2>
+          <input
+            type="password"
+            name="userPassword"
+            id="userPassword"
+            class="inputSingUp"
+          />
+        </div>
+      </div>
+
+      <article class="flex justify-center space-x-3">
+        <input
+          type="submit"
+          name="singIn"
+          value="Sing in"
+          class="rounded-lg border bg-gray-300 p-1 hover:cursor-pointer"
+          formaction="/Login"
+          formmethod="get"
+        />
+
+        <input
+          type="submit"
+          name="singUp"
+          value="Sing up"
+          class="rounded-lg border bg-green-600 p-1 text-white hover:cursor-pointer"
+        />
+      </article>
+    </form>
+
+    <section class="flex justify-center py-8 align-middle">
+      <h2>-----------</h2>
+      <h2 class="px-2">OR</h2>
+      <h2>-----------</h2>
+    </section>
+
+    <section class="space-y-2">
+      <div
+        class="flex justify-center rounded-full border border-slate-400 bg-white p-1 align-middle hover:cursor-pointer"
+      >
+        <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+        <svg
+          enable-background="new 0 0 128 128"
+          id="Social_Icons"
+          version="1.1"
+          viewBox="0 0 128 128"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="h-5 w-5"
+        >
+          <g id="_x31__stroke">
+            <g id="Google">
+              <rect
+                clip-rule="evenodd"
+                fill="none"
+                fill-rule="evenodd"
+                height="128"
+                width="128"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M27.585,64c0-4.157,0.69-8.143,1.923-11.881L7.938,35.648    C3.734,44.183,1.366,53.801,1.366,64c0,10.191,2.366,19.802,6.563,28.332l21.558-16.503C28.266,72.108,27.585,68.137,27.585,64"
+                fill="#FBBC05"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M65.457,26.182c9.031,0,17.188,3.2,23.597,8.436L107.698,16    C96.337,6.109,81.771,0,65.457,0C40.129,0,18.361,14.484,7.938,35.648l21.569,16.471C34.477,37.033,48.644,26.182,65.457,26.182"
+                fill="#EA4335"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M65.457,101.818c-16.812,0-30.979-10.851-35.949-25.937    L7.938,92.349C18.361,113.516,40.129,128,65.457,128c15.632,0,30.557-5.551,41.758-15.951L86.741,96.221    C80.964,99.86,73.689,101.818,65.457,101.818"
+                fill="#34A853"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M126.634,64c0-3.782-0.583-7.855-1.457-11.636H65.457v24.727    h34.376c-1.719,8.431-6.397,14.912-13.092,19.13l20.474,15.828C118.981,101.129,126.634,84.861,126.634,64"
+                fill="#4285F4"
+                fill-rule="evenodd"
+              />
+            </g>
+          </g>
+        </svg>
+        <h2 class="px-2">Continue with Google</h2>
+      </div>
+      <div
+        class="flex justify-center rounded-full border border-slate-400 bg-[#3B5998] p-1 align-middle hover:cursor-pointer"
+      >
+        <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+        <svg
+          enable-background="new 0 0 32 32"
+          height="32px"
+          id="Layer_1"
+          version="1.0"
+          viewBox="0 0 32 32"
+          width="32px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="h-5 w-5"
+        >
+          <g>
+            <circle
+              clip-rule="evenodd"
+              cx="16"
+              cy="16"
+              fill="#3B5998"
+              fill-rule="evenodd"
+              r="16"
+            />
+            <path
+              d="M22,32V20h4l1-5h-5v-2c0-2,1.002-3,3-3h2V5c-1,0-2.24,0-4,0c-3.675,0-6,2.881-6,7v3h-4v5h4v12H22   z"
+              fill="#FFFFFF"
+              id="f_2_"
+            />
+          </g>
+          <g />
+          <g />
+          <g />
+          <g />
+          <g />
+          <g />
+        </svg>
+        <h2 class="px-2 text-white">Continue with Facebook</h2>
+      </div>
+    </section>
+    <div class="flex justify-center py-5">
+      <a href="" class="hover:text-blue-700 underline">Forgot password?</a>
+    </div>
+  </section>
+  </article>
+</article>

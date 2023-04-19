@@ -1,0 +1,53 @@
+{{>Navbar}}
+
+
+<article class="divide-y-2 divide-white" id="Container">
+    <section
+        class="flex h-screen content-center items-center justify-center bg-cover bg-no-repeat text-center align-middle"
+        style="background-image: url(/images/Cover_Events.jpg)">
+        <div class="flex h-screen w-screen items-center justify-center bg-black/25">
+            <div class="text-white font-black text-center">
+                <h1 class="text-7xl">
+                    Join to one of these events!!
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <form action="/EventRegistration" method="post">
+            <div class="flex space-x-5 bg-slate-900 py-5 px-36">
+                <section
+                    class="flex h-screen w-screen content-center items-center bg-cover justify-center bg-center bg-no-repeat text-center align-middle rounded-lg"
+                    style="background-image: url(/images/First_Place.jpg)">
+                    <div class="grid content-between">
+                        <div class="text-white font-black">
+                            <h1 class="text-6xl">Claustro de Sor Juana</h1>
+                            <br>
+
+                            <h2 class="text-4xl">Universidad politecnica de Durango's Graduation</h2>
+                        </div>
+                        <br>
+                        <br>
+
+                        {{#if attendance}}
+                        <div class="flex justify-center items-center">
+                            <a href="http://localhost:3000/HallReview" class="InteractiveButton">
+                                Access the event hall
+                            </a>
+                        </div>
+                        {{else}}
+                        <div class="flex flex-col justify-center items-center space-y-5">
+                            <input type="password" name="EventPassword" class="p-4 rounded-xl w-72 text-center"
+                                placeholder="Event's password" />
+                            <input type="submit" name="Claustro_de_Sor_Juana" class="InteractiveButton"
+                                value="Access the event hall" />
+                        </div>
+                        {{/if}}
+
+                </section>
+            </div>
+        </form>
+    </section>
+
+</article>
