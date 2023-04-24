@@ -1,0 +1,334 @@
+{{>Navbar}}
+
+
+<article class="bg-slate-900 text-white divide-y-2 divide-white">
+    <section
+        class="flex h-screen content-center items-center justify-center bg-cover bg-no-repeat text-center align-middle"
+        style="background-image: url(/images/First_Place.jpg);">
+
+        <h1 class="text-8xl text-white font-black">Claustro de Sor Juana</h1>
+    </section>
+
+    <section class="px-5 py-5 divide-y-2 divide-white space-y-5">
+        <div class="flex justify-between items-center space-x-12">
+            <div class="space-y-5 text-xl">
+                <div>
+                    <h2 class="font-black">Event location:</h2>
+                    <h3>{{location}}</h3>
+                    <br>
+                    <h2 class="font-black">Event description:</h2>
+                    <h3>{{description}}</h3>
+                    <br>
+                    <h2 class="font-black">Start date: </h2>
+                    <h3>{{startDate}}</h3>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h2 class="font-black">Specifications:</h2>
+                    <ul class="list-outside px-5">
+                        <li>Live music: {{liveMusic}}</li>
+                        <li>Pool: {{pool}}</li>
+                        <li>Game area: {{gamesArea}}</li>
+                        <li>Only adults: {{onlyAdults}}</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="http://localhost:3000/Gallery" class="flex flex-col justify-center items-center space-y-5">
+                <div class="flex justify-center items-center bg-no-repeat bg-center h-96 w-96 rounded-full"
+                    style="background-image: url(/images/First_Place.jpg);">
+                    <h2 class="font-black text-5xl">Image gallery</h2>
+                </div>
+            </a>
+        </div>
+        <section class="flex flex-col items-center py-5 space-y-5 relative" id="PartyRoomSection">
+            <h1 class="font-black text-6xl relative">Party Room</h1>
+            <br>
+            <div class="flex justify-center items-center space-x-10">
+                <div class="flex justify-center items-center space-x-4">
+                    <div class="testTableB">
+
+                    </div>
+                    <h2>Bassic Tables</h2>
+                </div>
+
+                <div class="flex justify-center items-center space-x-4">
+                    <div class="testTableV">
+
+                    </div>
+                    <h2>Vip tables</h2>
+                </div>
+            </div>
+            <br>
+            <div class="PartyRoomCss relative">
+
+                <div class="absolute text-2xl font-black text-black">
+                    <div class="Table_PartyRoomCss firstT relative flex" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T1">
+                            <h2>1</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss secondT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T2">
+                            <h2>2</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss thirdT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T3">
+                            <h2>3</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss fourthT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T4">
+                            <h2>4</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss fifthT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T5">
+                            <h2>5</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss sixthT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T6">
+                            <h2>6</h2>
+                        </div>
+                    </div>
+
+                    <div class="Table_PartyRoomCss seventhT relative" id="Tables">
+                        <div class="absolute" id="C1">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C2">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C3">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="absolute" id="C4">
+                            <?xml version="1.0" ?><svg height="50" viewBox="0 0 24 24" width="50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 13V4c0-1.103-.897-2-2-2H7c-1.103 0-2 .897-2 2v9a1 1 0 0 0-1 1v8h2v-5h12v5h2v-8a1 1 0 0 0-1-1zm-2-9v9h-2V4h2zm-4 0v9h-2V4h2zM7 4h2v9H7V4z" />
+                            </svg>
+                        </div>
+                        <div class="Table flex justify-center items-center" id="T7">
+                            <h2>7</h2>
+                        </div>
+                    </div>
+
+                    <div class="Scenario flex justify-center items-center text-5xl font-black text-white">
+                        <h2>Scenario</h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-center items-center space-y-10 py-5">
+            <h1 class="font-black text-6xl relative">Guest Status</h1>
+            <div class="flex justify-between items-center space-y-5 text-xl space-x-36">
+                <div class="font-white text-3xl relative text-center">
+                    <h2>Name: {{name}}</h2>
+                    <br>
+                    <h2>Last Name: {{lName}}</h2>
+                    <br>
+                    <h2>Email: {{email}}</h2>
+                    <br>
+                    <h2>Priority: {{priority}}</h2>
+                </div>
+                <div class="bg-no-repeat bg-cover bg-center h-96 w-96 rounded-full"
+                    style="background-image: url(/images/Face_Status.jpg);"></div>
+            </div>
+            {{#if priorityValidation}}
+            <form action="HallReview" method="post">
+                <input type="submit" class="InteractiveButton" value="Get VIP now!!">
+            </form>
+            {{/if}}
+        </section>
+    </section>
+</article>
